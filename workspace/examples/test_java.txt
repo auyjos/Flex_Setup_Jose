@@ -1,0 +1,83 @@
+// ========================================
+// test_java.java
+// Archivo de prueba para el lexer de Java
+// ========================================
+
+// --- 1. Identificadores válidos e inválidos ---
+int miVariable = 10;
+String _nombre = "Hola";
+double __valor123 = 3.14;
+int camelCase = 1;
+int PascalCase = 2;
+int _underscore_start = 3;
+int abc123def = 4;
+
+// --- 2. Literales numéricos ---
+// Enteros
+int a = 0;
+int b = 42;
+int c = 1000000;
+
+// Flotantes
+double d = 3.14;
+double e = 0.5;
+double f = 100.;
+double g = .75;
+
+// Notación científica
+double h = 1e10;
+double i = 3.14e2;
+double j = 2.5E-3;
+double k = 1e+5;
+
+// Hexadecimales
+int hex1 = 0xFF;
+int hex2 = 0x1A3F;
+int hex3 = 0XaBcD;
+int hex4 = 0x0;
+
+// --- 3. Operadores ---
+// Aritméticos
+int suma = a + b;
+int resta = a - b;
+int mult = a * b;
+int div = a / b;
+
+// Relacionales
+boolean r1 = (a == b);
+boolean r2 = (a != b);
+boolean r3 = (a < b);
+boolean r4 = (a > b);
+boolean r5 = (a <= b);
+boolean r6 = (a >= b);
+
+// Lógicos
+boolean l1 = (r1 && r2);
+boolean l2 = (r1 || r2);
+boolean l3 = !r1;
+
+// --- 4. Comentarios ---
+// Este es un comentario de una línea
+
+/* Este es un comentario
+   multilínea que abarca
+   varias líneas */
+
+int despuesDeComentario = 99;
+
+/* Comentario de una sola línea estilo bloque */
+
+// --- 5. Cadenas literales con secuencias de escape ---
+String s1 = "Hola Mundo";
+String s2 = "Linea1\nLinea2";
+String s3 = "Tab\taqui";
+String s4 = "Comilla: \"dentro\"";
+String s5 = "Backslash: \\ruta\\archivo";
+String s6 = "";
+String s7 = "Mezcla: \t\n\\\"todo junto\"";
+
+// --- Caso combinado ---
+if (a >= 10 && b != 0) {
+    double resultado = (a + b) * 3.14e2 / 0xFF;
+    String msg = "Resultado: OK\n";
+}
